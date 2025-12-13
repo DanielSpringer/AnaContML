@@ -1,3 +1,5 @@
+#%%
+
 WORKDIR = "/mnt/scratch/daniel/Data/AnaContML"
 
 import h5py
@@ -16,8 +18,8 @@ os.environ["OPENBLAS_NUM_THREADS"] = "1"
 BETA = 20
 Nt = 100
 tau = np.linspace(0.0, BETA, Nt)
-w = np.linspace(-10., 10., num=1000, endpoint=True)
-w2 = np.linspace(-10., 10., num=1000, endpoint=True)
+w = np.linspace(-10., 10., num=100, endpoint=True)
+w2 = np.linspace(-10., 10., num=100, endpoint=True)
 noise_amplitude = 1e-3
 
 PATH = WORKDIR+"/data_2025_new/w_max_10c0_w_steps_100/n_peaks_2_sigma_0c1_0c9/lambda_20c0/10000_sym_0_asym_MIT_synthetic_skewed/noise_level_0c001_noisy_samples_10/"
@@ -60,7 +62,8 @@ def main():
         f.create_dataset(f"w", data=np.array(w2))
         f.create_dataset(f"A_maxent", data=np.array(spectra))
         f.create_dataset(f"w_maxent", data=np.array(w))
-        
+        f.create_dataset(f"beta", data=BETA)
+
 
 if __name__ == "__main__":
     main()
