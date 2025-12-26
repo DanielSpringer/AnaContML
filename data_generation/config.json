@@ -1,10 +1,10 @@
 {
     "w_max": 10,
     "w_steps": 100,
-    "beta": 20,
+    "beta": 40,
     "n_peaks": 2,
     "sigma": [0.1, 0.9],
-    "n_sym_samples": 1e1,
+    "n_sym_samples": 1e5,
     "n_asym_samples": 0,
     "boundary_eps": 1e-5,
     "sampling_policy": "MIT_synthetic_skewed",
