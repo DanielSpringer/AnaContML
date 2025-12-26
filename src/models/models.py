@@ -1,6 +1,5 @@
-WORKDIR = "/mnt/scratch/daniel/Data/AnaContML"
 import sys
-sys.path.append(WORKDIR)
+sys.path.append('/gpfs/data/fs71925/dspringer1/Projects/AnaContML/')
 
 import torch 
 from torch import nn
